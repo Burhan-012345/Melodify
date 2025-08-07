@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- Info Text Section -->
+            <div class="info-text">
+                <div class="text-item active" id="login-info">
+                    <h2>Welcome Back!</h2>
+                    <p>Please enter your credentials to access your account.</p>
+                </div>
+                <div class="text-item" id="register-info">
+                    <h2>Create Account</h2>
+                    <p>Join us today! Fill in your details to get started.</p>
+                </div>
+                <div class="text-item" id="forgot-info">
+                    <h2>Reset Password</h2>
+                    <p>Enter your User ID and new password to reset your credentials.</p>
+                </div>
+            </div>
+
+            <!-- Forms Section -->
+            <div class="forms">
+                <!-- Login Form -->
+                <form class="form active" id="login-form">
+                    <h2>Login to your melodify account</h2>
+                    <div class="input-group">
+                        <input type="text" id="login-username" required>
+                        <label for="login-username">Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="login-password" required>
+                        <label for="login-password">Password</label>
+                        <span class="toggle-password" onclick="togglePassword('login-password')">
+                            <i class="far fa-eye"></i>
+                        </span>
+                    </div>
+                    <div class="links">
+                        <a href="#" class="switch-form" data-target="register">Create Account</a>
+                        <a href="#" class="switch-form" data-target="forgot">Forgot Password?</a>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+
+                <!-- Register Form -->
+                <form class="form" id="register-form">
+                    <h2>Register</h2>
+                    <div class="input-group">
+                        <input type="text" id="register-userid" readonly onclick="copyToClipboard('register-userid')">
+                        <label for="register-userid">User ID (Click to copy)</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="register-username" required>
+                        <label for="register-username">Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="register-email" required>
+                        <label for="register-email">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="register-password" required>
+                        <label for="register-password">Password</label>
+                        <span class="toggle-password" onclick="togglePassword('register-password')">
+                            <i class="far fa-eye"></i>
+                        </span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="register-confirm-password" required>
+                        <label for="register-confirm-password">Confirm Password</label>
+                        <span class="toggle-password" onclick="togglePassword('register-confirm-password')">
+                            <i class="far fa-eye"></i>
+                        </span>
+                    </div>
+                    <div class="links">
+                        <a href="#" class="switch-form" data-target="login">Already have an account?</a>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+
+                <!-- Forgot Password Form -->
+                <form class="form" id="forgot-form">
+                    <h2>Reset Password</h2>
+                    <div class="input-group">
+                        <input type="text" id="forgot-userid" required>
+                        <label for="forgot-userid">User ID</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="forgot-username" required>
+                        <label for="forgot-username">Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="forgot-new-password" required>
+                        <label for="forgot-new-password">New Password</label>
+                        <span class="toggle-password" onclick="togglePassword('forgot-new-password')">
+                            <i class="far fa-eye"></i>
+                        </span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="forgot-confirm-password" required>
+                        <label for="forgot-confirm-password">Confirm Password</label>
+                        <span class="toggle-password" onclick="togglePassword('forgot-confirm-password')">
+                            <i class="far fa-eye"></i>
+                        </span>
+                    </div>
+                    <div class="links">
+                        <a href="#" class="switch-form" data-target="login">Back to Login</a>
+                    </div>
+                    <button type="submit">Reset Password</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Notification -->
+        <div class="notification" id="notification"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
