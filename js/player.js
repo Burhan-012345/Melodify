@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
             artist: "Ambient Waves",
             duration: "3:45",
             file: "./songs/Bol Do Na Zara.mp3",
-            albumArt: "./assets/img1.jpeg",
+            albumArt: "./assets/Img1.jpeg",
             lyrics: "",
             isDefault: true
         },
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
             artist: "Jimi Hendrix",
             duration: "4:15",
             file: "./songs/Humdum savi.mp3",
-            albumArt: "./assets/img2.jpeg",
+            albumArt: "./assets/Img2.jpeg",
             lyrics: "Purple haze all in my brain\nLately things don't seem the same\nActing funny but I don't know why\nExcuse me while I kiss the sky",
             isDefault: true
         },
